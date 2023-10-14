@@ -7,7 +7,7 @@ import ru.netology.model.Post;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
-@Repository
+
 public class PostRepositoryImpl implements PostRepository{
 
     private HashMap<Long, Post> postContainer = new HashMap<>();
