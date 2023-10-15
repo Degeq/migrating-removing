@@ -3,9 +3,11 @@ package ru.netology.service;
 import org.springframework.stereotype.Service;
 import ru.netology.exception.NotFoundException;
 import ru.netology.model.Post;
+import ru.netology.model.PostAdvanced;
 import ru.netology.repository.PostRepository;
 import ru.netology.repository.PostRepositoryImpl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -17,7 +19,12 @@ public class PostService {
   }
 
   public List<Post> all() {
-    return repository.all();
+    List<PostAdvanced> allList = repository.all();
+    List<Post> externalList = new ArrayList<>();
+    for (PostAdvanced i : allList) {
+      externalList.add(i.getPost());
+    }
+    return externalList;
   }
 
   public Post getById(long id) {

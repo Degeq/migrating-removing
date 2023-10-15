@@ -2,7 +2,7 @@ package ru.netology.model;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-public class Post {
+public class Post extends PostAdvanced{
   private long id;
   private String content;
 
