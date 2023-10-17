@@ -3,16 +3,6 @@ package ru.netology;
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.connector.Connector;
 import org.apache.catalina.startup.Tomcat;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContextExtensionsKt;
-import ru.netology.configuration.MainConfig;
-import ru.netology.controller.PostController;
-import ru.netology.repository.PostRepositoryImpl;
-import ru.netology.service.PostService;
-
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.nio.file.Files;
 
